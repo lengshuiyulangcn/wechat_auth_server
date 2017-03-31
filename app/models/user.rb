@@ -1,7 +1,8 @@
 class User < ApplicationRecord
 
 	def self.from_token_request request
-		code = request.params[:code]
+    code = request.params["code"]
+    return nil unless code
     find_or_create_by_code(code)
 	end
 
