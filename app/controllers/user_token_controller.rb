@@ -1,8 +1,5 @@
 class UserTokenController < Knock::AuthTokenController
 
-  def create
-    render json: auth_token, status: :created
-  end
   private
   def authenticate
     unless entity.present?
