@@ -2,8 +2,7 @@ class Api::V1::UsersController < Api::V1::ApiController
   before_action :authenticate_user, except: [:index] 
 
   def index
-    #@users = User.where("end_at > ?", DateTime.now)
-    @users = User.all
+    @users = User.where(agreement: true)
   end
 
   def me
