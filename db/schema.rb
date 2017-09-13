@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 20170331005008) do
 
   create_table "users", force: :cascade do |t|
-    t.string   "nickname"
-    t.string   "avatar_url"
-    t.string   "open_id"
-    t.string   "session_id"
+    t.string "nickname"
+    t.string "avatar_url"
+    t.string "open_id"
+    t.string "session_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
